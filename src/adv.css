@@ -1,0 +1,14 @@
+.adv{
+    height: 600px;
+    width: 352px;
+    background-color:white;
+    float: right;
+    margin-top: -604px;
+    margin-right: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-style: solid;
+    border-width: 2px;
+    
+}
