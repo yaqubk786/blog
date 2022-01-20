@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   bollywood,
   fitness,
@@ -10,25 +10,49 @@ import { useParams, Link } from "react-router-dom";
 
 export default function CategoryPage() {
   const params = useParams();
-  let arr = [];
+  const [currentParam, setCurrentParam] = useState("");
+  const [categoryData, setCategoryData] = useState([]);
+  const arr = [];
+  const [category, setCategory] = useState("");
 
-  if (params.id === "bollywood") {
-    arr = bollywood;
-  } else if (params.id === "hollywood") {
-    arr = hollywood;
-  } else if (params.id === "technology") {
-    arr = technology;
-  } else if (params.id === "fitness") {
-    arr = fitness;
-  } else if (params.id === "food") {
-    arr = food;
+  const getCategory = async () => {
+    console.log("api ran !!");
+    fetch("http://localhost:5000/blog/getcategory", {
+      method: "POST",
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "same-origin", // include, *same-origin, omit
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: "follow", // manual, *follow, error
+      referrerPolicy: "no-referrer",
+      body: JSON.stringify({ category: category }),
+    })
+      .then((res) => res.json())
+      .then((result) => setCategoryData(result))
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
+  if (params.id != currentParam) {
+    console.log("param changed !!");
+    setCurrentParam(params.id);
+    setCategory(params.id);
   }
+
+  useEffect(() => {
+    getCategory();
+  }, [category, currentParam]);
+
   return (
     <section className="className">
       <div className="container">
         {params.id} Page
         <div className="row">
-          {arr.map((item) => {
+          {categoryData.map((item) => {
             return (
               <div className="col-md-12" key={item.id}>
                 <Link to={`/${params.id}/post/${item.id}`}>
