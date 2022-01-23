@@ -47,6 +47,8 @@ export default function CategoryPage() {
     getCategory();
   }, [category, currentParam]);
 
+  //process.env.PUBLIC_URL + "/media/building.jpg"
+
   return (
     <section className="className">
       <div className="container">
@@ -59,7 +61,7 @@ export default function CategoryPage() {
                   <div className="ar-div1">
                     <img
                       className="ar-img"
-                      src={process.env.PUBLIC_URL + "/media/building.jpg"}
+                      src={ process.env.PUBLIC_URL + "/media/building.jpg"} //item.image
                     />
                     <span className="ar-text">{item.title}</span>
                     <span>

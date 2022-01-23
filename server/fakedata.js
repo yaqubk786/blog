@@ -193,7 +193,7 @@ export const bollywood = [
     },
     {
       id: 2,
-      image: "media/building.jpg",
+      image: "https://www.licious.in/blog/wp-content/uploads/2016/07/Biryani.jpg",
       desc: "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       date: "12/12/2019",
       category: "food",
@@ -201,7 +201,7 @@ export const bollywood = [
     },
     {
       id: 3,
-      image: "media/building.jpg",
+      image: "https://www.licious.in/blog/wp-content/uploads/2016/07/Biryani.jpg",
       desc: "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       date: "12/12/2019",
       category: "food",
@@ -209,7 +209,7 @@ export const bollywood = [
     },
     {
       id: 4,
-      image: "media/building.jpg",
+      image: "https://www.licious.in/blog/wp-content/uploads/2016/07/Biryani.jpg",
       desc: "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
       date: "12/12/2019",
       category: "food",
@@ -217,7 +217,7 @@ export const bollywood = [
     },
     {
       id: 5,
-      image: "media/building.jpg",
+      image: "https://www.licious.in/blog/wp-content/uploads/2016/07/Biryani.jpg",
       desc: "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum.   ",
       date: "12/12/2019",
       category: "food",
